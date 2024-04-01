@@ -1,6 +1,4 @@
-export const selectBackendUrl = () => {
-  return (state) => state.api.backendUrl;
-};
+
 
 export const selectLoginError = () => {
   return (state) => state.login.error;

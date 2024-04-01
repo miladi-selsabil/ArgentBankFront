@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createAction, createReducer } from "@reduxjs/toolkit";
+ 
 
 import {
   userTokenAction,
@@ -17,7 +18,7 @@ const loginFetchingAction = createAction("login/fetching");
 const loginResolvedAction = createAction("login/resolved");
 const loginRejectedAction = createAction("login/rejected");
 
-export const fetchOrUpdateLogin = (backendUrl, email, password) => {
+export const fetchOrUpdateLogin = ( email, password) => {
   return async (dispatch, getState) => {
     const selectLogin = (state) => state.login;
     const status = selectLogin(getState()).status;
@@ -27,13 +28,13 @@ export const fetchOrUpdateLogin = (backendUrl, email, password) => {
 
     dispatch(loginFetchingAction());
     await axios
-      .post(backendUrl + "/login", {
+      .post("http://localhost:3001/api/v1/user/login", {
         email: email,
         password: password,
       })
       .then((response) => {
         dispatch(loginResolvedAction(response.data));
-        dispatch(fetchOrUpdateUser(backendUrl, response.data.body.token));
+        dispatch(fetchOrUpdateUser( response.data.body.token));
         dispatch(userTokenAction(response.data.body.token));
         dispatch(isConnectedAction(true));
       })

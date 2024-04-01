@@ -5,8 +5,8 @@ import Header from "../Components/Header";
 function Content(){
     return(
         <>
-        <Header />
-        <Index/>
+            <Header />
+            <Index/>
         </>
     )
 

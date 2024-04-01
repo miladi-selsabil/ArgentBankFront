@@ -5,11 +5,11 @@ import React from "react";
 
 function Profile() {
 return (
-<div>
-<Header/>
-<User/>
-<Footer/>
-</div>
+  <>
+    <Header />
+    <User />
+    <Footer />
+  </>
 );
 }
 export default Profile;

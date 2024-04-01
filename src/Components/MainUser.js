@@ -27,7 +27,7 @@ function User() {
 
   useEffect(() => {
     dispatch(fetchOrUpdateUser);
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     if (!isConnected ) {

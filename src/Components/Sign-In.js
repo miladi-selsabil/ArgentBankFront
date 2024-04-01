@@ -6,7 +6,6 @@ import { fetchOrUpdateLogin } from "../store/login";
 import {
   selectLoginError,
   selectIsConnected,
-  selectBackendUrl,
 } from "../store/selector";
 
 
@@ -18,7 +17,6 @@ function SignIn() {
   const dispatch = useDispatch();
   const localUserEmail = localStorage.getItem("userEmail");
 
-  const backendUrl = useSelector(selectBackendUrl());
   const loginError = useSelector(selectLoginError());
   const isConnected = useSelector(selectIsConnected());
 
@@ -32,7 +30,7 @@ function SignIn() {
     rememberMe
       ? localStorage.setItem("userEmail", email)
       : localStorage.removeItem("userEmail");
-    dispatch(fetchOrUpdateLogin(backendUrl, email, password));
+    dispatch(fetchOrUpdateLogin( email, password));
   };
 
   const handleRememberMe = () => {

@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { modifyUserName } from "../store/user";
 
 import {
-  selectBackendUrl,
   selectUserToken,
   selectUserFirstName,
   selectUserLastName,
@@ -16,7 +15,6 @@ import { useDispatch, useSelector } from "react-redux";
 function EditNameForm() {
   const dispatch = useDispatch();
 
-  const backendUrl = useSelector(selectBackendUrl());
   const userToken = useSelector(selectUserToken());
   const userFirstName = useSelector(selectUserFirstName());
   const userLastName = useSelector(selectUserLastName());
@@ -42,7 +40,7 @@ function EditNameForm() {
       newFirstName.length > 0 &&
       newLastName.length > 0
     ) {
-      dispatch(modifyUserName(backendUrl, userToken, newFirstName, newLastName));
+      dispatch(modifyUserName( userToken, newFirstName, newLastName));
       setShowEditNameForm(false);
       setEditNameFormError("");
     }

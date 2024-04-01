@@ -26,7 +26,7 @@ export const userResetAction = createAction("user/reset");
 //Mes a jour les donnees des utilisateurs
 //action asynchrones 
 //getsate et dispatch pour interagir avec redux 
-export const fetchOrUpdateUser = (backendUrl, token) => {
+export const fetchOrUpdateUser = ( token) => {
   return async (dispatch, getState) => {
     
     const selectUser = (state) => state.user;
@@ -39,7 +39,7 @@ export const fetchOrUpdateUser = (backendUrl, token) => {
     dispatch(userFetchingAction());
     await axios({
       method: "POST",
-      url: backendUrl + "/profile",
+      url: "http://localhost:3001/api/v1/user/profile",
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => {
@@ -56,7 +56,7 @@ export const fetchOrUpdateUser = (backendUrl, token) => {
 };
 
 //modifie le nom de l'utilisateur
-export const modifyUserName = (backendUrl, token, firstname, lastname) => {
+export const modifyUserName = ( token, firstname, lastname) => {
   return async (dispatch, getState) => {
     
     const selectUser = (state) => state.user;
@@ -68,7 +68,7 @@ export const modifyUserName = (backendUrl, token, firstname, lastname) => {
     dispatch(userFetchingAction());
     axios({
       method: "PUT",
-      url: backendUrl + "/profile",
+      url: "http://localhost:3001/api/v1/user/profile",
       headers: { Authorization: `Bearer ${token}` },
       data: {
         firstName: firstname,
