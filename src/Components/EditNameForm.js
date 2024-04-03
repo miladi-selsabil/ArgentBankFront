@@ -15,9 +15,9 @@ import { useDispatch, useSelector } from "react-redux";
 function EditNameForm() {
   const dispatch = useDispatch();
 
-  const userToken = useSelector(selectUserToken());
   const userFirstName = useSelector(selectUserFirstName());
   const userLastName = useSelector(selectUserLastName());
+  const userToken = useSelector(selectUserToken());
 
   const [newFirstName, setNewFirstName] = useState(null);
   const [newLastName, setNewLastName] = useState(null);
