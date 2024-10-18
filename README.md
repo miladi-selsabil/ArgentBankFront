@@ -172,6 +172,7 @@ Clone the repository :
 ### Installing and launching Back-end:
 
 1. The backend of the project is located here : https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API
+
        - Fork this repo
        - Clone the repo onto your computer
 
@@ -185,13 +186,12 @@ Clone the repository :
 
 ### Installing and launching Front-end:
 
-1. Go in "Front-end" folder :
 
-2. Install all dependencies for Front-end:
+1. Install all dependencies for Front-end:
 
 -   `npm install` or `yarn`
 
-3. Launch front-end on port 3000 (default port):
+2. Launch front-end on port 3000 (default port):
 
 -   `npm start` or `yarn start`
 
