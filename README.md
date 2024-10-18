@@ -1,70 +1,211 @@
-# Getting Started with Create React App
+![ArgentBank](/src/assets/logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ArgentBank 🏦💵
 
-## Available Scripts
+![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)
+![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)
+![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)
+[![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://github.com/miladi-selsabil)
+[![React](https://img.shields.io/badge/react-20232a?style=for-the-badge&logo=react&logocolor=61dafb)](https://reactjs.org/)
 
-In the project directory, you can run:
+<a href="#description-fr-">README en Français</a> - <a href="#en-description">English README</a>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description FR :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ceci est un projet réalisé dans le cadre du programme de formation Développeur Front-end JavaScript React chez [OpenClassrooms](https://openclassrooms.com/fr/paths/877-developpeur-dapplication-javascript-react)
 
-### `npm test`
+> Écrivez des appels à l'API REST pour connecter le front au back et modélisez une API.
+>
+> #### Compétences évaluées :
+>
+> -   Implémenter un gestionnaire d'état dans une application React 🔄
+> -   Interagir avec une API 🤝
+> -   Modéliser une API 📝
+> -   S'authentifier à une API 🔑
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Situation (fictive) du projet :
 
-### `npm run build`
+Développeur Front-end dans une agence spécialisée dans le développement d’applications web.
+L’agence à un nouveau projet avec une nouvelle banque qui a besoin d'aide pour mettre en place son application. Le projet se décompose en deux phases :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Phase 1 : Authentification des utilisateurs - Création d'une application web permettant aux clients de se connecter et de gérer leurs comptes et leur profil.
+-   Phase 2 : Transactions - Spécifier les endpoints d’API nécessaires pour une deuxième mission.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Mon rôle lors de la phase 1 a été de développer l’application web avec authentification des utilisateurs à l’aide de React et Redux. Concernant la phase 2, mon rôle a été de proposer un [modèle pour la conception de l’API des transactions](/swagger.yaml) à ouvrir avec Swagger.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Phase 1 : Contraintes techniques :
 
-### `npm run eject`
+-   Créer l’application web (responsive) avec React.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    -   Comme point de départ, le HTML statique et le CSS est fourni pour la page d'accueil, la page de connexion et la page de profil.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Utiliser Redux pour gérer le state de l'application, notamment l’application doit avoir :
+    -   Un store pour gérer les données
+    -   Des actions pour l’envoi des informations
+    -   Des reducers pour gérer les changements d'état de l'application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Phase 1 : Contraintes fonctionnelles :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-   L'utilisateur peut visiter la page d'accueil
+-   L'utilisateur peut se connecter au système
+    -   Accédez à la page de connexion (/Sign)
+    -   Remplir le formulaire de connexion avec ses identifiants
+    -   Se connecter à l’application en utilisant des jetons JWT pour l'authentification
+    -   Naviguer avec succès vers la page de profil (/profile)
+-   L'utilisateur ne peut voir les informations relatives à son propre profil qu'après s'être connecté avec succès
+    -   Accédez à la page de profil (/profile)
+    -   Voir leur prénom sur la page de profil
+    -   Voir les informations de compte bancaire
+-   L'utilisateur peut modifier le profil (nom et prénom) et conserver les données dans la base de données.
+-   L'utilisateur peut se déconnecter du système
+    -   Voir le bouton de déconnexion une fois connecté
+    -   Cliquez sur le bouton de déconnexion, déconnecte l’utilisateur et celui-ci revient à la page d'accueil (/)
 
-## Learn More
+## Installation :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Procédure d'installation :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Cloner le repository:
 
-### Code Splitting
+-   `https://github.com/miladi-selsabil/ArgentBantFront.git`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation et lancement du Back-end :
 
-### Analyzing the Bundle Size
+1. Le projet backend se trouve ici: https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    - Forker le projet
+    - Cloner le projet
 
-### Making a Progressive Web App
+2. Installer toutes les dépendances pour le Back-end :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-   `npm install` ou `yarn`
 
-### Advanced Configuration
+3. Lancer le back-end sur le port 3001 (port par défaut) :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-   `npm run dev` ou `yarn run dev`
 
-### Deployment
+### Installation et lancement du Front-end :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+1. Installer toutes les dépendances pour Front-end :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   `npm install` ou `yarn`
+
+2. Lancer le Front-end sur le port 3000 (port par défaut) :
+
+-   `npm start` ou `yarn start`
+
+## Développé avec :
+
+-   [Visual Studio Code](https://code.visualstudio.com/) - Éditeur de texte
+-   [React 18](https://fr.reactjs.org/) - Bibliothèque JavaScript libre développée par Facebook
+-   [Create React App](https://create-react-app.dev/) - Boîte à outils créée par Facebook, qui est la référence pour initier un projet React
+-   [React Router V6](https://reactrouter.com/) - Bibliothèque de routage pour React
+-   [Prop-types](https://www.npmjs.com/package/prop-types) - Un package utilisé pour documenter les types de propriétés prévus transmises aux composants React
+-   [Redux](https://redux.js.org/) - Bibliothèque JS de gestion d'état pour applications web
+-   [JSDoc](https://jsdoc.app/) - Générateur de documentation pour JavaScript
+-   [GitHub](https://github.com/) - Outil de gestion de versions
+
+## Auteur :
+
+**Selsabil Miladi** : [**GitHub**](https://github.com/miladi-selsabil) 
+---
+
+## EN Description:
+
+This is a project carried out as part of the Front-End JavaScript React Developer training program at [OpenClassrooms](https://openclassrooms.com/fr/paths/877-developpeur-dapplication-javascript-react).
+
+> Write REST API calls to connect the front-end to the back-end and model an API.
+>
+> #### Skills evaluated:
+>
+> -   Implement a state manager in a React application 🔄
+> -   Interact with an API 🤝
+> -   Model an API 📝
+> -   Authenticate with an API 🔑
+
+### Project (fictional) situation:
+
+I am a Front-end Developer in an agency specialized in web application development.
+The agency has a new project with a new bank that needs help setting up its application. The project is divided into two phases:
+
+-   Phase 1: User Authentication - Creating a web application that allows clients to log in and manage their accounts and profile.
+-   Phase 2: Transactions - Specifying the necessary API endpoints for a second mission.
+
+My role during phase 1 was to develop the web application with user authentication using React and Redux. Regarding phase 2, my role was to propose a [model for designing the transaction API](/swagger.yaml) to be opened with Swagger.
+
+### Phase 1: Technical Constraints:
+
+-   Create the web application (responsive) with React.
+
+    -   As a starting point, static HTML and CSS is provided for the homepage, login page, and profile page.
+
+-   Use Redux to manage the application state, including the application must have:
+    -   A store to manage data
+    -   Actions to send information
+    -   Reducers to manage changes in the application state
+
+### Phase 1: Functional Constraints:
+
+-   The user can visit the homepage.
+-   The user can log in to the system.
+    -   Access the login page (/Sign)
+    -   Fill in the login form with their credentials
+    -   Log in to the application using JWT tokens for authentication
+    -   Successfully navigate to the profile page (/profile)
+-   The user can only see information related to their own profile after successfully logging in.
+    -   Access the profile page (/profile)
+    -   See their first name on the profile page
+    -   See banking account information
+-   The user can edit the profile (first and last name) and retain the data in the database.
+-   The user can log out of the system.
+    -   See the logout button once logged in
+    -   Clicking the logout button logs the user out and returns them to the homepage (/)
+
+### Installation process:
+
+Clone the repository :
+
+-   `git clone https://github.com/miladi-selsabil/ArgentBantFront.git`
+
+### Installing and launching Back-end:
+
+1. The backend of the project is located here : https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API
+       - Fork this repo
+       - Clone the repo onto your computer
+
+2. Install all dependencies for Back-end:
+
+-   `npm install` or `yarn`
+
+3. Launch back-end on port 3001 (default port):
+
+-   `npm run dev` or `yarn run dev`
+
+### Installing and launching Front-end:
+
+1. Go in "Front-end" folder :
+
+2. Install all dependencies for Front-end:
+
+-   `npm install` or `yarn`
+
+3. Launch front-end on port 3000 (default port):
+
+-   `npm start` or `yarn start`
+
+## Built With:
+
+-   [Visual Studio Code](https://code.visualstudio.com/) - Text editor
+-   [React 18](https://reactjs.org/) - Free and open-source JavaScript library developed by Facebook
+-   [Create React App](https://create-react-app.dev/) - Toolkit created by Facebook, which is the reference for initiating a React project
+-   [React Router V6](https://reactrouter.com/) - Routing library for React
+-   [Prop-types](https://www.npmjs.com/package/prop-types) - A package used to document the intended types of properties passed to React components
+-   [Redux](https://redux.js.org/) - JS library for state management in web applications
+-   [JSDoc](https://jsdoc.app/) - Documentation generator for JavaScript
+-   [GitHub](https://github.com/) - Version control tool
+
+## Author:
+
+**Selsabil Miladi**: [**GitHub**](https://github.com/miladi-selsabil) 
