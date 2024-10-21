@@ -72,7 +72,7 @@ Cloner le repository:
 
 ### Installation et lancement du Back-end :
 
-1. Le projet backend se trouve ici: https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API
+1. Le projet backend se trouve ici: https://github.com/miladi-selsabil/ArgentBankBack
 
     - Forker le projet
     - Cloner le projet
@@ -171,7 +171,7 @@ Clone the repository :
 
 ### Installing and launching Back-end:
 
-1. The backend of the project is located here : https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API
+1. The backend of the project is located here : https://github.com/miladi-selsabil/ArgentBankBack
 
        - Fork this repo
        - Clone the repo onto your computer
