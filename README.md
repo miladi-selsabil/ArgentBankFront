@@ -83,7 +83,7 @@ Cloner le repository:
 
 3. Lancer le back-end sur le port 3001 (port par défaut) :
 
--   `npm run dev` ou `yarn run dev`
+-   `npm run dev:server` 
 
 ### Installation et lancement du Front-end :
 
